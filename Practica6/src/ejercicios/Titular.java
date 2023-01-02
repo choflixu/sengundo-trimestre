@@ -2,18 +2,22 @@ package ejercicios;
 
 public class Titular {
 
-	private Titular nombre;
-	private Titular apellidos;
-	private Titular edad;
+	private String nombre;
+	private String apellidos;
+	private int edad;
 	
-	public void imprimir() {
-		System.out.println(this.nombre);
-		System.out.println(this.apellidos);
-		System.out.println(this.edad);
+	public Titular(String nombre, String apellidos, int edad) {
+		
+		this.nombre=nombre;
+		this.apellidos=apellidos;
+		this.edad=edad;
+		
 	}
-    public String comparar() {
-    	if (this.	) {
-			
-		}
-    }
+	
+	public String toString() {
+		
+		return this.nombre+" "+this.apellidos+" "+this.edad;
+		
+	}
+  
 }

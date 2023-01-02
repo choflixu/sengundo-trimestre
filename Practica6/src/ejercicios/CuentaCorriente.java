@@ -39,28 +39,26 @@ public class CuentaCorriente {
 
 	public void ingresar() {
 
-		double incrementa;
-		incrementa = this.saldo+(this.saldo*0.3);
+		
+		this.saldo= this.saldo+(this.saldo*0.3);
 
 	}
 	
 	public void reintegro() {
 		
-		double decrementa;
-		
-		decrementa=this.saldo-(this.saldo*0.3);
+		this.saldo= this.saldo-(this.saldo*0.3);
 	}
 	
-	public void imprimir() {
+	
+	public String toString() {
 		
-		System.out.println(this.tipoCuenta);
-		System.out.println(this.saldo);
+		return this.tipoCuenta+" "+this.saldo;
 		
 	}
 	
 	public boolean comparar(CuentaCorriente cuenta) {
 		
-		if (this.tipoCuenta.equals(cuenta.tipoCuenta)) {
+		if (this.tipoCuenta.compareTo(cuenta.tipoCuenta)==0) {
 			return true;
 		}
 		return false;
